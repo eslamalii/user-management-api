@@ -137,10 +137,4 @@ CREATE TABLE IF NOT EXISTS users (
 - Unit tests are located in `src/tests/`.
 - Use Jest for running tests.
 
-## License
 
-This project is open-sourced under the MIT License - see the LICENSE file for details.
-
-```
-
-```
