@@ -110,13 +110,6 @@ CREATE TABLE IF NOT EXISTS users (
   loginCount INT DEFAULT 0,
   isAdmin BOOLEAN DEFAULT FALSE
 );
-
-CREATE TABLE IF NOT EXISTS login_history (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT NOT NULL,
-  loginTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES users(id)
-);
 ```
 
 ## Running the Project
