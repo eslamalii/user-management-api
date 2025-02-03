@@ -1,15 +1,12 @@
-import swaggerJSDoc from 'swagger-jsdoc'
+// src/swagger.ts
 import swaggerUi from 'swagger-ui-express'
 import { Express } from 'express'
-import { swaggerDefinition } from './swaggerDef'
+import path from 'path'
+import fs from 'fs'
 
-const options = {
-  swaggerDefinition,
-  apis: ['./src/routes/*.ts'],
-}
-
-const swaggerSpec = swaggerJSDoc(options)
+const swaggerPath = path.join(__dirname, 'docs', 'swagger.json')
+const swaggerDocument = JSON.parse(fs.readFileSync(swaggerPath, 'utf8'))
 
 export const setupSwagger = (app: Express) => {
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 }
