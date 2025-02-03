@@ -4,6 +4,6 @@ import app from '../../app'
 
 const server = express()
 
-server.use('/.netlify/functions/server/api-docs', app)
+server.use('/.netlify/functions/server', app)
 
 export const handler = serverless(server)
