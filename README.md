@@ -18,7 +18,7 @@ A Node.js/Express API built with TypeScript featuring MySQL integration, request
 - Request logging middleware using Winston
 - Docker containerization and Docker Compose support
 - Environment configuration system
-- Comprehensive unit and integration test setup
+- Unit Test
 
 ## Installation
 
