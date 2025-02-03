@@ -35,3 +35,6 @@ out/
 # Temp files
 .tmp
 .cache
+
+# Local Netlify folder
+.netlify
